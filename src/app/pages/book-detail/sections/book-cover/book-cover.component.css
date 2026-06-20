@@ -1,0 +1,12 @@
+.bd-image-col {
+  background-color: #F5EDD8;
+}
+
+.bd-cover {
+  max-width: 260px;
+  box-shadow: 0 8px 30px rgba(100, 70, 30, 0.18);
+}
+
+.bd-discount {
+  background-color: #e53935;
+}

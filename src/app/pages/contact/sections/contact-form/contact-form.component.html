@@ -1,0 +1,80 @@
+<div class="bg-white p-5 rounded shadow-sm border">
+  <h3 class="form-title text-center mb-4 fw-bold fs-5">Kontakt</h3>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="d-flex flex-column gap-3">
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Ime i prezime</mat-label>
+        <input matInput formControlName="name" />
+        <mat-icon matPrefix>person</mat-icon>
+      </mat-form-field>
+      @if (name?.invalid && name?.touched) {
+        @if (name?.errors?.['required']) {
+          <p class="text-danger small mt-1">Ime je obavezno.</p>
+        }
+        @if (name?.errors?.['minlength']) {
+          <p class="text-danger small mt-1">Minimum 3 karaktera.</p>
+        }
+      }
+    </div>
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Email adresa</mat-label>
+        <input matInput type="email" formControlName="email" />
+        <mat-icon matPrefix>email</mat-icon>
+      </mat-form-field>
+      @if (email?.invalid && email?.touched) {
+        @if (email?.errors?.['required']) {
+          <p class="text-danger small mt-1">Email je obavezan.</p>
+        }
+        @if (email?.errors?.['email']) {
+          <p class="text-danger small mt-1">Unesite ispravan email.</p>
+        }
+      }
+    </div>
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Tema</mat-label>
+        <mat-select formControlName="subject">
+          <mat-option value="porudzbina">Porudžbina</mat-option>
+          <mat-option value="povrat">Povrat knjige</mat-option>
+          <mat-option value="saradnja">Saradnja</mat-option>
+          <mat-option value="ostalo">Ostalo</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>topic</mat-icon>
+      </mat-form-field>
+      @if (subject?.invalid && subject?.touched) {
+        <p class="text-danger small mt-1">Izaberite temu.</p>
+      }
+    </div>
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Poruka</mat-label>
+        <textarea matInput formControlName="message" rows="5"></textarea>
+        <mat-icon matPrefix>message</mat-icon>
+        <mat-hint align="end">{{ message?.value?.length || 0 }} / 500</mat-hint>
+      </mat-form-field>
+      @if (message?.invalid && message?.touched) {
+        @if (message?.errors?.['required']) {
+          <p class="text-danger small mt-1">Poruka je obavezna.</p>
+        }
+        @if (message?.errors?.['minlength']) {
+          <p class="text-danger small mt-1">Minimum 10 karaktera.</p>
+        }
+      }
+    </div>
+
+    <button type="submit" mat-raised-button class="btn-submit-material fw-bold" [disabled]="form.invalid">
+      <mat-icon class="text-white">send</mat-icon>
+      Pošalji
+    </button>
+
+    @if (submitted) {
+      <p class="text-success small mt-1">Poruka je uspešno poslata</p>
+    }
+
+  </form>
+</div>

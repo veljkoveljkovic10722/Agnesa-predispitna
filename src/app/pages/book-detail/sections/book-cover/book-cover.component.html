@@ -1,0 +1,10 @@
+<div class="bd-image-col d-flex justify-content-center p-4 p-md-5 rounded-3">
+  <div class="position-relative">
+    @if (book().discount > 0) {
+      <span class="bd-discount position-absolute top-0 end-0 translate-middle px-2 py-1 small fw-bold text-white z-1 rounded-1">
+        -{{ book().discount }}%
+      </span>
+    }
+    <img [src]="book().image" [alt]="book().title" class="bd-cover img-fluid d-block rounded-1" />
+  </div>
+</div>

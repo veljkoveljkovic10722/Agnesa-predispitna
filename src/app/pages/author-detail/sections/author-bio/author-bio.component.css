@@ -1,0 +1,14 @@
+.detail-name {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+}
+
+.detail-biography p {
+  color: #444;
+  line-height: 1.85;
+}

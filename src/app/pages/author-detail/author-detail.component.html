@@ -1,0 +1,22 @@
+@if (pageData$ | async; as state) {
+  @if (state.loading) {
+    <div class="d-flex justify-content-center align-items-center py-5">
+      <mat-spinner />
+    </div>
+  } @else if (state.author; as author) {
+    <app-page-banner
+      [title]="author.firstName + ' ' + author.lastName"
+      subtitle="Profil autora"
+    />
+
+    <div ngxScrollAnimate="fade-in-up" [aos]="0.3" class="container-lg py-4 py-md-5">
+      <div class="d-flex flex-column flex-md-row gap-5 align-items-md-start">
+        <app-author-sidebar [author]="author" />
+        <div class="flex-grow-1">
+          <app-author-bio [author]="author" />
+          <app-author-books [books]="state.books" />
+        </div>
+      </div>
+    </div>
+  }
+}

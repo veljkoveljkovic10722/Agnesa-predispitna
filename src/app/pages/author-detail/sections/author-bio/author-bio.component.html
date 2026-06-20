@@ -1,0 +1,7 @@
+<h1 class="detail-name mb-1 fs-1 fw-bold">{{ author().firstName }} {{ author().lastName }}</h1>
+<h5 class="section-heading d-flex align-items-center fs-5 fw-bold mb-3">Biografija</h5>
+<div class="detail-biography fs-6">
+  @for (paragraph of author().biography.split('\n\n'); track $index) {
+    <p class="mb-3">{{ paragraph }}</p>
+  }
+</div>

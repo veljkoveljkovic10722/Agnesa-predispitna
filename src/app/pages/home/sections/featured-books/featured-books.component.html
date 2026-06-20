@@ -1,0 +1,29 @@
+<section ngxScrollAnimate="fade-in-up" [aos]="0.3" class="featured-section bg-white py-5">
+  <div class="container-lg">
+    <h2 class="section-title mb-2 fs-2 fw-bold text-center">Istaknute knjige</h2>
+    <p class="section-subtitle mb-4 text-center text-muted">Najbolji izbor iz naše kolekcije</p>
+
+    @if (featuredBooks$ | async; as state) {
+      @if (state.loading) {
+        <div class="d-flex justify-content-center py-5">
+          <mat-spinner />
+        </div>
+      } @else {
+        <div class="books-grid d-grid gap-4 gap-md-5">
+          @for (book of state.books; track book.id) {
+            <app-book-card
+              [bookId]="book.id"
+              [title]="book.title"
+              [author]="book.author"
+              [price]="book.price"
+              [rating]="book.rating"
+              [discount]="book.discount"
+              [genre]="book.genre"
+              [imageUrl]="book.image"
+            />
+          }
+        </div>
+      }
+    }
+  </div>
+</section>

@@ -1,0 +1,44 @@
+.bd-category {
+  color: var(--color-tan);
+  letter-spacing: 2px;
+}
+
+.bd-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+  line-height: 1.1;
+}
+
+.bd-star {
+  font-size: 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+  line-height: 18px !important;
+}
+
+.bd-star--on { color: #f5a623; }
+.bd-star--off { color: #ddd; }
+
+.bd-desc {
+  color: #555;
+  line-height: 1.8;
+}
+
+.bd-meta-label {
+  color: var(--color-tan);
+  letter-spacing: 0.8px;
+}
+
+.bd-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--color-brown);
+}
+
+.bd-cart-btn {
+  letter-spacing: 0.8px !important;
+}
+
+.bd-cart-btn:hover {
+  background-color: var(--color-brown) !important;
+}

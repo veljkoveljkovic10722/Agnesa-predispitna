@@ -1,0 +1,28 @@
+.header-nav {
+  background-color: var(--color-brown) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-height: 50px;
+  width: auto;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-gold) !important;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+  color: var(--color-gold) !important;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggler-material {
+  color: rgba(255, 255, 255, 0.85) !important;
+}

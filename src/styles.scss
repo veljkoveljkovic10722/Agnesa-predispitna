@@ -1,0 +1,72 @@
+@use '@angular/material' as mat;
+
+$bookstore-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$orange-palette,
+  ),
+  typography: (
+    plain-family: 'DM Sans, sans-serif',
+    brand-family: 'Cormorant Garamond, serif',
+  ),
+));
+
+html {
+  @include mat.all-component-themes($bookstore-theme);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+:root {
+  --color-gold:   #DBC38C;
+  --color-white:  #FFFFFF;
+  --color-cream:  #F2E5BB;
+  --color-tan:    #C3AF89;
+  --color-brown:  #9F8D73;
+
+  --border-radius-card: 8px;
+  --shadow-card:        0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-card-hover:  0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  background-color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+  color: var(--color-tan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-brown);
+}
+
+.loading-container {
+  grid-column: 1 / -1;
+}
+
+.mat-mdc-raised-button,
+.mat-mdc-flat-button {
+  background-color: var(--color-gold) !important;
+  color: var(--color-white) !important;
+}
+
+.mat-mdc-button:not(.navbar-toggler-material):not([mat-icon-button]) {
+  color: var(--color-gold) !important;
+}

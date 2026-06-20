@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "firstName": "Fjodor",
+    "lastName": "Dostojevski",
+    "birthYear": 1821,
+    "deathYear": 1881,
+    "nationality": "Ruska",
+    "biography": "Fjodor Mihajlovič Dostojevski (1821–1881) jedan je od najvećih i najuticajnijih pisaca u istoriji svetske književnosti. Rođen u Moskvi, u porodici lekara, odrastao je u relativnom siromaštvu i od rane mladosti bio izložen surovosti ruskog društva. Studirao je vojnu inženjeriju u Sankt Peterburgu, ali ga je srce vuklo ka književnosti. Svoj prvi roman, 'Jadni ljudi' (1846), objavio je u dvadeset četvrtoj godini i odmah privukao pažnju kritičara.\n\nUbrzo potom usledio je životni preokret koji je zauvek oblikovao njegovo stvaralaštvo. Godine 1849. uhapšen je zbog učešća u revolucionarnom krugu Petraševaca i osuđen na smrt. Na gubilištu, u poslednjim sekundama, kazna mu je preinačena u četiri godine robije u Sibiru, a potom još četiri godine vojničke službe. To iskustvo suočavanja sa smrću i život među osuđenicima opisao je u 'Zapiskima iz mrtvog doma' (1862) jednom od najsnažnijih autobiografskih dela u literaturi.\n\nPo povratku u književni život, Dostojevski je stvorio niz romana koji su preokrenuli razumevanje psihologije u fikciji. 'Zločin i kazna' (1866), 'Idiot' (1869), 'Demoni' (1872) i 'Braća Karamazovi' (1880) istražuju pitanja krivice, slobode, vere, nihilizma i ljudske prirode s dubinom i intenzitetom koji ni pre ni posle njega nije dostignut. Bio je preteča egzistencijalizma i jedan od omiljenih pisaca Frojda, Ničea i Ajnštajna. Umro je u Sankt Peterburgu 1881. godine, samo tri meseca po objavljivanju 'Braće Karamazovi'.",
+    "image": "/authors/fjodordostojevski.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Lav",
+    "lastName": "Tolstoj",
+    "birthYear": 1828,
+    "deathYear": 1910,
+    "nationality": "Ruska",
+    "biography": "Lav Nikolajevič Tolstoj (1828–1910) smatra se jednim od dva najveća romanopisca u istoriji (uz Dostojevskog), a mnogi kritičari ga smatraju najvećim prozaistom svih vremena. Rođen na porodičnom imanju Jasna Poljana u Tuli, Rusija, odrastao je u aristokratskoj porodici. Studije na Kazanjskom univerzitetu napustio je pre završetka, a potom je proveo nekoliko godina lutajući i eksperimentišući s načinom života pre nego što se posvetio pisanju.\n\nSvoja prva dela 'Detinjstvo' (1852), 'Dečaštvo' (1854) i 'Mladost' (1856) objavio je dok je još služio u vojsci kao artiljerijski oficir na Kavkazu i u Krimskom ratu. Iskustvo rata duboko ga je potreslo i ostavilo trag u kratkim pričama o Sevastopolju. Međutim, svetsku slavu doneli su mu epski romani 'Rat i mir' (1869) i 'Ana Karenjina' (1878), koji i danas važe za remek-dela ne samo ruske, već i ukupne svetske književnosti.\n\nU kasnijim godinama Tolstoj je doživeo duhovnu krizu i radikalno promenio pogled na život. Odrekao se prethodnih romana, razvio sopstvenu hrišćansku filozofiju zasnovanu na nenasilju, asketizmu i racionalnom tumačenju Hristovog učenja, čime je uticao na Mahatmu Gandija. Napisao je i filozofski testament 'Šta je umetnost?' (1897) u kom je odbacio skoro sve što je prethodno stvorio. Umro je 1910. na jednoj od ruskih železničkih stanica, pokušavajući da pobegne od sopstvene slave i nasledstva.",
+    "image": "/authors/lavtolstoj.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Džejn",
+    "lastName": "Ostin",
+    "birthYear": 1775,
+    "deathYear": 1817,
+    "nationality": "Britanska",
+    "biography": "Džejn Ostin (1775–1817) jedna je od najomiljenijih i najviše čitanih engleskih pisaca svih vremena, čija dela i danas privlače milione čitalaca širom sveta. Rođena u malom seoskom mestu Stiventon u Hampširu, Engleska, kao sedmo od osmoro dece sveštenika Džordža Ostina, nikada se nije udala niti napustila roditeljski dom. Svakodnevni život engleske provincije bio je sve što joj je trebalo za stvaranje neprolaznih likova.\n\nOstin je počela pisati kao tinejdžerka, parodirajući sentimentalne romane koji su bili u modi. Prvu verziju 'Gordosti i predrasude' tada nazvanu 'Prve utiske' završila je sa samo dvadeset i jednom godinom, ali roman je objavljen tek 1813. U međuvremenu je napisala i prvu verziju 'Razuma i osećajnosti' (objavljeno 1811), koja je bila prvi roman objavljen pod njenim imenom iako anonimno, jer su žene pisci u to vreme retko objavljivale pod sopstvenim imenom.\n\nNjenoj ostavštini pripada šest romana: 'Razum i osećajnost', 'Gordost i predrasuda', 'Mensfild park', 'Ema', 'Northanger Abbey' i posthumno objavljeni 'Ubeđivanje'. Svi se bave temama ljubavi, braka i društvenih konvencija Ređentske ere, prikazanim kroz preciznu, ironičnu i duhovitu prozu. Njen stil je jasan, suptilan i lako prepoznatljiv. Umrla je 1817. u Vinčesteru, sa svega 41 godinom, a razlog njene bolesti i danas nije do kraja razjašnjen.",
+    "image": "/authors/džejnostin.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "Čarls",
+    "lastName": "Dikens",
+    "birthYear": 1812,
+    "deathYear": 1870,
+    "nationality": "Britanska",
+    "biography": "Čarls Džon Hafam Dikens (1812–1870) najpoznatiji je britanski pisac viktorijanskog doba i jedan od najpopularnijih romanopisaca svih vremena. Rođen u Portsmautu, odrastao je u siromaštvu otac mu je bio zatvoren zbog dugova, a on je sa dvanaest godina radio u fabrici paste za cipele. Ovo iskustvo poniženja i socijalne nepravde duboko ga je obeležilo i postalo centralna tema gotovo svih njegovih dela.\n\nDikens je karijeru gradio polako, počevši kao novinski izveštač, a zatim objavljujući u nastavcima humorističke skice koje su se ubrzo pretvorile u popularne romane. 'Pikvikovci' (1836–37) doneli su mu slavu, a potom je sledila neprekinuta serija bestselera: 'Oliver Tvist' (1838), 'Nikolas Naklbi' (1839), 'Stara radoznalica' (1841), 'Barnaби Radž' (1841), 'Martin Čazlvit' (1844), 'Dombej i sin' (1848), 'Dejvid Koperfild' (1850), 'Bleak House' (1853), 'Teška vremena' (1854), 'Mali Dorit' (1857), 'Priča o dva grada' (1859), 'Velika očekivanja' (1861) i 'Naš zajednički prijatelj' (1865).\n\nDikens je bio ne samo pisac već i socijalni reformator. Kroz svoja dela žestoko je kritikovao radne domove, dečiji rad, loše zatvore i nehumano obrazovanje. Imao je neverovatnu sposobnost stvaranja upečatljivih likova od mračnih zlikovaca do simpatičnih ekscentrika koji su postali deo kolektivnog kulturnog pamćenja. Umro je 1870. od moždanog udara, ne završivši roman 'Misteriozni slučaj Edvina Druda'.",
+    "image": "/authors/carlsdikens.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "Onore de",
+    "lastName": "Balzak",
+    "birthYear": 1799,
+    "deathYear": 1850,
+    "nationality": "Francuska",
+    "biography": "Onore de Balzak (1799–1850) jedan je od osnivača evropskog realizma i autor jednog od najambicioznijih književnih projekata u istoriji ciklusa romana i priča pod zajedničkim naslovom 'Ljudska komedija' (La Comédie humaine). Taj ciklus, koji obuhvata oko devedeset romana, novela i kratkih priča, zamišljen je kao sveobuhvatna panorama francuskog društva od Revolucije do 1840-ih sa više od dve hiljade likova koji se pojavljuju i nestaju kroz različita dela.\n\nRođen u Turu, Balzak je studirao pravo ali se brzo okrenuo književnosti. Pre nego što je pronašao pravi glas, pisao je pod pseudonimima jeftine avanturističke romane, a uz to se upuštao u razne biznis poduhvate koji su ga ostavljali u dugovima. Dugovi su zapravo bili konstantan motiv njegova života gotovo nikada nije imao novca, a istovremeno je živeo rasipnički i trošio neumereno. Da bi otplatio dugove, pisao je neverovatnom brzinom, ponekad i po šesnaest sati dnevno, podstičan ogromnim količinama kafe.\n\nNjegova najznačajnija dela uključuju 'Otac Gorijot' (1835), 'Eugeniu Grandet' (1833), 'Izgubljene iluzije' (1837–43) i 'Sjaj i beda kurtizana' (1847). Balzak je bio jedan od prvih pisaca koji je sustavno opisivao novac, ambiciju i klasnu borbu kao pokretačke sile modernog društva. Umro je 1850. godine od zastoja srca, iscrpljen godinama rada.",
+    "image": "/authors/onoredebalzak.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Marko",
+    "lastName": "Aurelije",
+    "birthYear": 121,
+    "deathYear": 180,
+    "nationality": "Rimska",
+    "biography": "Marko Aurelije Antonin (121–180) bio je rimski car od 161. do 180. godine i jedan od najistaknutijih predstavnika stoičke filozofije. Često nazivan 'filozofom na prestolu', predstavlja retki primer vladara koji je istinski živeo prema filozofskim načelima koja je zastupao. Vladao je u periodu kada je Rimsko carstvo bilo na vrhuncu moći, ali i pod stalnim pritiscima od graničnih ratova do kuge koja je poharala imperiju.\n\nNjegovo filozofsko delo 'Razgovori sa sobom' (Meditationes) nije nastalo s namerom objavljivanja to su lični zapisi, vođeni na grčkom jeziku, u kojima car vodi intimni razgovor sa sopstvenim unutrašnjim glasom. Pisano tokom vojnih kampanja na Dunavu, ovo delo predstavlja dnevnik neprekidnih nastojanja da se ostane dobar, razuman i miran usred haosa vlasti i rata. Kroz kratke fragmente Marko Aurelije se podstiče na strpljenje, poniznost, svesnost prolaznosti i privrženost dužnosti.\n\nStoicizam koji je zastupao počiva na uverenju da jedino naše misli i stavovi jesu u našoj moći, a ne spoljna dešavanja. Ovo učenje, izraženo u 'Razgovorima sa sobom', danas je popularnije nego ikad stoicizam je doživeo renesansu kao filozofski i praktični okvir za suočavanje sa stresom, nesigurnošću i gubitkom. Marko Aurelije umro je 180. godine u Vindoboni (današnji Beč), verovatno od kuge, dok je vodio vojnu kampanju.",
+    "image": "/authors/markoaurelije.jpg"
+  }
+]

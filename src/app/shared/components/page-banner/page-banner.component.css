@@ -1,0 +1,15 @@
+.page-banner {
+  background: linear-gradient(135deg, var(--color-tan) 0%, var(--color-brown) 100%);
+}
+
+.banner-content {
+  max-width: 800px;
+}
+
+.banner-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-subtitle {
+  opacity: 0.95;
+}

@@ -1,0 +1,22 @@
+.about-title {
+  color: var(--color-brown);
+}
+
+.about-image {
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+.about-text {
+  line-height: 1.8;
+}
+
+.about-features mat-icon {
+  color: var(--color-tan);
+  font-size: 21px;
+  width: 21px;
+  height: 21px;
+}

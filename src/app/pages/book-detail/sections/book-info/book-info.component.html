@@ -1,0 +1,53 @@
+<p class="bd-category text-uppercase small fw-semibold mb-1">{{ book().genre }}</p>
+<h1 class="bd-title fw-bold mb-1">{{ book().title }}</h1>
+<p class="fst-italic text-muted mb-3">{{ book().author }}</p>
+
+<div class="d-flex align-items-center gap-2 mb-4">
+  @for (star of stars; track star) {
+    <mat-icon class="bd-star {{ star <= book().rating ? 'bd-star--on' : 'bd-star--off' }}">
+      {{ star <= book().rating ? 'star' : 'star_border' }}
+    </mat-icon>
+  }
+  <span class="small text-muted">{{ book().rating }}.0 / 5</span>
+</div>
+
+<p class="bd-desc mb-4">{{ book().description }}</p>
+
+<dl class="mb-4">
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <dt class="bd-meta-label text-uppercase small fw-semibold">ISBN</dt>
+    <dd class="small text-dark mb-0">{{ book().isbn }}</dd>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <dt class="bd-meta-label text-uppercase small fw-semibold">Broj strana</dt>
+    <dd class="small text-dark mb-0">{{ book().pageCount }}</dd>
+  </div>
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <dt class="bd-meta-label text-uppercase small fw-semibold">Godina izdanja</dt>
+    <dd class="small text-dark mb-0">{{ book().publicationYear }}</dd>
+  </div>
+  <div class="d-flex justify-content-between {{ publisher() ? 'border-bottom' : '' }} py-2">
+    <dt class="bd-meta-label text-uppercase small fw-semibold">Šifra artikla</dt>
+    <dd class="small text-dark mb-0">{{ book().articleCode }}</dd>
+  </div>
+  @if (publisher()) {
+    <div class="d-flex justify-content-between py-2">
+      <dt class="bd-meta-label text-uppercase small fw-semibold">Izdavač</dt>
+      <dd class="small text-dark mb-0">{{ publisher()!.name }}</dd>
+    </div>
+  }
+</dl>
+
+<div class="d-flex align-items-center gap-4 flex-wrap pt-3 border-top">
+  <div>
+    @if (book().discount > 0) {
+      <span class="small text-muted text-decoration-line-through d-block">{{ book().price }} RSD</span>
+      <span class="bd-price fw-bold text-danger">{{ discountedPrice }} RSD</span>
+    } @else {
+      <span class="bd-price fw-bold">{{ book().price }} RSD</span>
+    }
+  </div>
+  <button mat-flat-button class="bd-cart-btn fw-bold text-uppercase py-3">
+    <mat-icon>shopping_cart</mat-icon> Dodaj u korpu
+  </button>
+</div>

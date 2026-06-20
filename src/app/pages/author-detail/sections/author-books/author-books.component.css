@@ -1,0 +1,22 @@
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+}
+
+.book-list-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.book-list-genre {
+  color: var(--color-tan);
+  letter-spacing: 1px;
+}
+
+.book-price {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-brown);
+  font-size: 1.05rem;
+}

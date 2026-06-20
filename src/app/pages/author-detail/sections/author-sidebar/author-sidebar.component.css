@@ -1,0 +1,11 @@
+.detail-portrait {
+  width: 220px;
+  height: 220px;
+  box-shadow: var(--shadow-card);
+}
+
+.detail-meta-box {
+  width: 220px;
+  background-color: #fafafa;
+  border-color: #e9ecef !important;
+}

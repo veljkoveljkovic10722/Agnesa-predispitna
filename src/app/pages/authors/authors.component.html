@@ -1,0 +1,23 @@
+<app-page-banner title="Naši autori" subtitle="Upoznajte pisace čija dela su nas inspirisala" />
+
+<div ngxScrollAnimate="fade-in-up" [aos]="0.3" class="container-lg">
+  <div class="py-4 py-md-5">
+    <div class="authors-grid d-grid gap-4 gap-md-5">
+      @if (authors$ | async; as authors) {
+        @for (author of authors; track author.id) {
+          <app-author-card
+            [authorId]="author.id"
+            [name]="author.firstName + ' ' + author.lastName"
+            [birthYear]="author.birthYear"
+            [bio]="author.biography"
+            [imageUrl]="author.image"
+          />
+        }
+      } @else {
+        <div class="loading-container d-flex justify-content-center align-items-center py-5">
+          <mat-spinner diameter="60"></mat-spinner>
+        </div>
+      }
+    </div>
+  </div>
+</div>

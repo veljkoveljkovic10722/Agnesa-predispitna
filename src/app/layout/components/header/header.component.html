@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark header-nav py-2">
+  <div class="container-lg">
+    <a class="navbar-brand fw-bold" routerLink="/home" (click)="closeMenu()">
+      <img src="/novaScreenshot 2026-05-28 154512-Photoroom.png" alt="Knjižara Logo" class="img-fluid">
+    </a>
+    <button
+      mat-icon-button
+      class="navbar-toggler-material d-lg-none"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+    >
+      <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
+    <div class="collapse navbar-collapse mt-lg-0 mt-3" [class.show]="isMenuOpen()">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+            Početna
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" routerLink="/books" routerLinkActive="active" (click)="closeMenu()">
+            Knjige
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" routerLink="/authors" routerLinkActive="active" (click)="closeMenu()">
+            Autori
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+            Kontakt
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" routerLink="/author" routerLinkActive="active" (click)="closeMenu()">
+            Autor sajta
+          </a>
+        </li>
+        <li class="nav-item d-lg-none">
+          <hr class="dropdown-divider" />
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

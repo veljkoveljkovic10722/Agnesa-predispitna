@@ -1,0 +1,23 @@
+<div class="flex-shrink-0 text-center text-md-start">
+  <img
+    [src]="author().image"
+    [alt]="author().firstName + ' ' + author().lastName"
+    class="detail-portrait rounded-circle object-fit-cover"
+  />
+
+  <div class="detail-meta-box mt-4 p-3 rounded border">
+    @if (author().nationality) {
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span class="small"><strong>Nacionalnost:</strong> {{ author().nationality }}</span>
+      </div>
+    }
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <span class="small"><strong>Rođen:</strong> {{ author().birthYear }}</span>
+    </div>
+    @if (author().deathYear) {
+      <div class="d-flex align-items-center gap-2">
+        <span class="small"><strong>Preminuo:</strong> {{ author().deathYear }}</span>
+      </div>
+    }
+  </div>
+</div>

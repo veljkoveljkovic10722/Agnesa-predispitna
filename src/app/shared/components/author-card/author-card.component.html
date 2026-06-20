@@ -1,0 +1,9 @@
+<div class="author-card text-center d-flex flex-column h-100 py-5 px-4 bg-white">
+  <img [src]="imageUrl()" [alt]="name()" class="author-portrait rounded-circle object-fit-cover mx-auto">
+  <h5 class="author-name mt-3 mb-2 fw-bold fs-6">{{ name() }}</h5>
+  @if (birthYear() > 0) {
+    <p class="author-year mb-3 fs-6">{{ birthYear() }}</p>
+  }
+  <p class="author-bio mb-3 fs-6 text-muted">{{ bio() }}</p>
+  <button mat-flat-button class="btn-profil w-100 fw-bold text-uppercase mt-auto text-white" [routerLink]="['/authors', authorId()]">Profil</button>
+</div>

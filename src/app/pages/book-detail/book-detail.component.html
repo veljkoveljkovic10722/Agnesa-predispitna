@@ -1,0 +1,26 @@
+@if (pageData$ | async; as state) {
+  @if (state.loading) {
+    <div class="d-flex justify-content-center align-items-center py-5">
+      <mat-spinner />
+    </div>
+  } @else if (state.book; as book) {
+    <app-page-banner [title]="book.title" [subtitle]="book.author" />
+
+    <div ngxScrollAnimate="fade-in-up" [aos]="0.3" class="container py-4 py-md-5">
+      <div class="row g-4 g-md-5 align-items-start">
+        <div class="col-md-4">
+          <app-book-cover [book]="book" />
+        </div>
+        <div class="col-md-8">
+          <app-book-info [book]="book" [publisher]="state.publisher" />
+        </div>
+      </div>
+
+      <div class="pt-4 mt-2 border-top">
+        <a mat-raised-button routerLink="/knjige" class="back-btn fw-bold">
+          <mat-icon>arrow_back</mat-icon> Knjige
+        </a>
+      </div>
+    </div>
+  }
+}

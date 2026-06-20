@@ -1,0 +1,20 @@
+@if (books().length > 0) {
+  <div class="mt-4 pt-4 border-top">
+    <h5 class="section-heading d-flex align-items-center fs-5 fw-bold mb-3">Knjige u našoj ponudi</h5>
+    <ul class="list-unstyled mb-0">
+      @for (book of books(); track book.id) {
+        <li class="d-flex align-items-center justify-content-between gap-3 py-3 {{ $last ? '' : 'border-bottom' }}">
+          <div class="flex-grow-1">
+            <p class="book-list-title fw-bold mb-1">{{ book.title }}</p>
+            <div class="d-flex align-items-center gap-3">
+              <span class="book-list-genre text-uppercase small fw-semibold">{{ book.genre }}</span>
+              <span class="small text-muted">{{ book.publicationYear }}</span>
+              <span class="small text-muted">{{ book.pageCount }} str.</span>
+            </div>
+          </div>
+          <span class="book-price fw-bold flex-shrink-0">{{ book.price }} RSD</span>
+        </li>
+      }
+    </ul>
+  </div>
+}

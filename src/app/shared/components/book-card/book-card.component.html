@@ -1,0 +1,39 @@
+<div class="book-card d-flex flex-column h-100 bg-white overflow-hidden">
+  <div class="book-image position-relative overflow-hidden">
+    @if (discount() > 0) {
+      <span class="discount-badge position-absolute z-1 text-white small fw-bold px-2 py-1 rounded-1">-{{ discount() }}%</span>
+    }
+    <img [src]="imageUrl()" [alt]="title()" loading="lazy" class="w-100 h-100 object-fit-cover" />
+  </div>
+
+  <div class="book-body d-flex flex-column flex-grow-1 px-3 pb-3 pt-3">
+    @if (genre()) {
+      <p class="card-genre text-uppercase small fw-semibold mb-1">{{ genre() }}</p>
+    }
+
+    <h3 class="book-title fw-bold mb-1">{{ title() }}</h3>
+    <p class="book-author fst-italic small text-muted mb-2">{{ author() }}</p>
+
+    <div class="d-flex align-items-center gap-1">
+      @for (star of stars; track star) {
+        <mat-icon class="star-icon {{ star <= rating() ? 'text-warning' : 'text-secondary' }}">
+          {{ star <= rating() ? 'star' : 'star_border' }}
+        </mat-icon>
+      }
+      <span class="small text-muted">{{ rating() }}.0</span>
+    </div>
+
+    <div class="d-flex align-items-baseline gap-2 mt-auto pt-3 border-top">
+      @if (discount() > 0) {
+        <span class="small text-muted text-decoration-line-through">{{ price() }}RSD</span>
+        <span class="card-price fw-bold text-danger">{{ discountedPrice  }}RSD</span>
+      } @else {
+        <span class="card-price fw-bold">{{ price() }}RSD</span>
+      }
+    </div>
+
+    <button mat-flat-button class="btn-details w-100 mt-2 fw-bold text-uppercase text-white" [routerLink]="['/books', bookId()]">
+      Detalji
+    </button>
+  </div>
+</div>
