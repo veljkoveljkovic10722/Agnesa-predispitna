@@ -1,0 +1,29 @@
+.filter-sidebar {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
+  padding: 20px;
+}
+
+.sidebar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--color-brown);
+  letter-spacing: 0.08em;
+}
+
+.panel-title {
+  font-size: 0.68rem;
+  color: var(--color-brown);
+  letter-spacing: 0.1em;
+}
+
+.reset-btn {
+  color: var(--color-tan) !important;
+  min-width: unset !important;
+}
+
+.apply-btn {
+  background-color: var(--color-gold) !important;
+  color: #fff !important;
+  letter-spacing: 0.05em;
+}

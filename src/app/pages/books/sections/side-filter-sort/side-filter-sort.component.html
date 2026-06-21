@@ -1,0 +1,109 @@
+<div class="filter-sidebar bg-white rounded-3">
+
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <span class="sidebar-title fw-semibold text-uppercase">Filteri</span>
+    <button mat-button class="reset-btn" type="button" (click)="reset()">
+      <mat-icon>refresh</mat-icon>
+      Resetuj
+    </button>
+  </div>
+
+  <mat-divider class="mb-1" />
+
+  <mat-accordion [multi]="true">
+
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Pretraga</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field class="w-100 mt-1" appearance="outline">
+        <mat-label>Naslov ili autor</mat-label>
+        <input matInput [value]="pending().keyword"
+               (input)="set('keyword', $any($event.target).value)" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Sortiranje</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field class="w-100 mt-1" appearance="outline">
+        <mat-label>Sortiraj po</mat-label>
+        <mat-select [value]="pending().sortBy"
+                    (selectionChange)="set('sortBy', $event.value)">
+          @for (opt of sortOptions; track opt.value) {
+            <mat-option [value]="opt.value">{{ opt.label }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Kategorija</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field class="w-100 mt-1" appearance="outline">
+        <mat-label>Sve katerogije</mat-label>
+        <mat-select [value]="pending().genre"
+                    (selectionChange)="set('genre', $event.value)">
+          <mat-option value="">Svi</mat-option>
+          @for (genre of availableGenres(); track genre) {
+            <mat-option [value]="genre">{{ genre }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Cena (RSD)</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="d-flex gap-2 mt-1">
+        <mat-form-field appearance="outline" class="w-50">
+          <mat-label>Od</mat-label>
+          <input matInput type="number" min="0"
+                 [value]="pending().priceFrom ?? ''"
+                 (change)="setPrice('priceFrom', $any($event.target).value)" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="w-50">
+          <mat-label>Do</mat-label>
+          <input matInput type="number" min="0"
+                 [value]="pending().priceTo ?? ''"
+                 (change)="setPrice('priceTo', $any($event.target).value)" />
+        </mat-form-field>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Ocena</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-radio-group [value]="pending().rating"
+                       (change)="set('rating', $event.value)"
+                       class="d-flex flex-column gap-2 mt-1">
+        @for (opt of ratingOptions; track opt.value) {
+          <mat-radio-button [value]="opt.value">{{ opt.label }}</mat-radio-button>
+        }
+      </mat-radio-group>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="panel-title fw-semibold text-uppercase">Popust</mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="mt-2">
+        <mat-slide-toggle [checked]="pending().isDiscounted"
+                          (change)="set('isDiscounted', $event.checked)">
+          Samo knjige na akciji
+        </mat-slide-toggle>
+      </div>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+  <button mat-raised-button type="button" class="w-100 mt-3 apply-btn fw-semibold" (click)="apply()">
+    Primeni
+  </button>
+
+</div>

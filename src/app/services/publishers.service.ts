@@ -5,7 +5,7 @@ import { IPublisher } from '../interfaces/i-publisher';
 
 @Injectable({ providedIn: 'root' })
 export class PublishersService {
-  protected readonly http = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
   getPublisherById(id: number): Observable<IPublisher | undefined> {
     return this.http.get<IPublisher[]>('/data/publishers.json').pipe(

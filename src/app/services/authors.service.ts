@@ -5,7 +5,7 @@ import { IAuthor } from '../interfaces/i-author';
 
 @Injectable({ providedIn: 'root' })
 export class AuthorsService {
-  protected readonly http = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
   getAuthors(): Observable<IAuthor[]> {
     return this.http.get<IAuthor[]>('/data/authors.json');

@@ -1,27 +1,43 @@
 <app-page-banner title="Naše knjige" subtitle="Pronađite savršenu knjigu za vas" />
 
-  <div ngxScrollAnimate="fade-in-up" [aos]="0.3" class="books-content bg-white">
-    <div class="container-lg py-5">
-      <div class="books-grid d-grid gap-4 gap-md-5">
-          @if (books$ | async; as books) {
-            @for (book of books; track book.id) {
-              <app-book-card
-                [bookId]="book.id"
-                [title]="book.title"
-                [author]="book.author"
-                [price]="book.price"
-                [rating]="book.rating"
-                [discount]="book.discount"
-                [genre]="book.genre"
-                [imageUrl]="book.image"
-              />
-            }
-          } @else {
-            <div class="loading-container d-flex justify-content-center align-items-center py-5">
-              <mat-spinner diameter="60"></mat-spinner>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
+<div ngxScrollAnimate="fade-in-up" [aos]="0.3" class="books-content bg-white">
+  <div class="container-lg py-5">
+    <div class="row g-4 align-items-start">
 
+      <div class="col-lg-3">
+        <app-side-filter-sort
+          [availableGenres]="(genres$ | async) ?? []"
+          (filterApplied)="onFilterApplied($event)"
+        />
+      </div>
+
+      <div class="col-lg-9">
+        @if (filteredBooks$ | async; as books) {
+          @if (books.length > 0) {
+            <div class="books-grid d-grid gap-4 gap-md-5">
+              @for (book of books; track book.id) {
+                <app-book-card
+                  [bookId]="book.id"
+                  [title]="book.title"
+                  [author]="book.author"
+                  [price]="book.price"
+                  [rating]="book.rating"
+                  [discount]="book.discount"
+                  [genre]="book.genre"
+                  [imageUrl]="book.image"
+                />
+              }
+            </div>
+          } @else {
+            <p class="text-center fst-italic text-muted py-5">Nema knjiga za izabrane filtere.</p>
+          }
+        } @else {
+          <div class="d-flex justify-content-center align-items-center py-5">
+            <mat-spinner diameter="60"></mat-spinner>
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</div>
