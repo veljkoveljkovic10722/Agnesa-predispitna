@@ -31,7 +31,7 @@ getBookById(id: number): Observable<IBook | undefined> {
   }
 
   private applyFilters(books: IBook[], filters: IBookFilters): IBook[] {
-    let result = [...books];
+    let result = books;
 
     const q = filters.keyword.toLowerCase();
     if (q) result = result.filter(b =>
@@ -45,11 +45,11 @@ getBookById(id: number): Observable<IBook | undefined> {
     if (filters.isDiscounted)   result = result.filter(b => b.discount > 0);
 
     switch (filters.sortBy) {
-      case 'name_asc':        return [...result].sort((a, b) => a.title.localeCompare(b.title, 'sr'));
-      case 'price_asc':       return [...result].sort((a, b) => a.price - b.price);
-      case 'price_desc':      return [...result].sort((a, b) => b.price - a.price);
-      case 'rating':          return [...result].sort((a, b) => b.rating - a.rating);
-      case 'publicationYear': return [...result].sort((a, b) => b.publicationYear - a.publicationYear);
+      case 'name_asc':        return result.sort((a, b) => a.title.localeCompare(b.title, 'sr'));
+      case 'price_asc':       return result.sort((a, b) => a.price - b.price);
+      case 'price_desc':      return result.sort((a, b) => b.price - a.price);
+      case 'rating':          return result.sort((a, b) => b.rating - a.rating);
+      case 'publicationYear': return result.sort((a, b) => b.publicationYear - a.publicationYear);
       default:                return result;
     }
   }
